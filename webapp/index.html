@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login page</title>
+<link rel="stylesheet" type="text/css" href="Style/indexStyle.css"/>
+<script src="utils.js" charset="utf-8" defer></script>
+<script src="loginManagement.js" charset="utf-8" defer></script>
+
+</head>
+<body>
+	<h1 class = "welcome">Welcome to your Image Gallery application!</h1>
+	<h1 class = "title" id = "title">Please login here:</h1>
+
+	<form class = "login" action="#">
+	
+		Username: <input type="text" name="username" required> <br><br>
+		Password: <input type="password" name="password" required><br><br>
+		<input id="loginbutton" type="button" value="Login">
+		<p id="errormessage" style = "color:red;"></p>
+		
+	</form>
+	
+	<br>
+	
+	<h1 class = "title">If you want to sign up please fill this registration form</h1>
+	
+	<form class = "registration" action="#">
+		Name: <input type="text" name="name" id = "name"
+				style="margin-right:35%; margin-bottom: 7%;" required><br>
+		Surname: <input type="text" name="surname" id = "surname"
+		        style="margin-right:29.5%; margin-bottom: 5%;" required><br>
+
+		Email: <input type="email" name="email" id = "email"
+				style="margin-right:35.5%; margin-bottom: 5%;" required><br>
+		
+		Username: <input type="text" name="registrationUsername" id = "username"
+				style="margin-right:27%; margin-bottom: 5%;" required><br>
+				
+		Password: <input type="password" name="registrationPassword" id = "password"
+				style="margin-right:28%; margin-bottom: 7%;" required><br>
+		Repeat Password: <input type="password" name="repeatedPassword" id = "repeatedPassword"
+				style="margin-right:14%;" required><br>
+		
+		<div style="margin-right: 40%;"><input id = "registerButton" type = "button" value = "Register"></div>
+		<p style="color:darkred" id="errorMessage"></p><br>
+	</form>	
+</body>
+</html>

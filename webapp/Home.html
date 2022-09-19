@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<link rel="stylesheet" type="text/css" media="all" href="Style/albumTablesStyle.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src = "utils.js" charset = "utf-8" defer></script>
+<script src = "albumManager.js" charset = "utf-8" defer></script>
+</head>
+<body class = "home">
+	<span style = "margin-left: 45%;" class ="title">Home Page</span>
+		
+		<span class="logout">
+			<a href="Logout">Logout</a>
+		</span>
+	<br>
+	
+	<p class ="title">Nice to see you again <span id="id_username"></span>!</p>
+	<div id="id_alert" class="alertmessage"></div>
+	
+	
+	<span class= "title" style = "margin-left: 39%;" id = "firstTitle"></span>
+	<span><input style = "margin-left: 30%;" class = "submitChange" id="saveChanges" type="button" value="Save Order"></span>
+	 			
+			<div class="grid" id = "grid"></div>		  		
+		 	 
+		 	<h3 class = "title">You can create a new album here:</h3>	
+	 	 	<form style = "text-align:center;" action = '#'>
+	 	 		<span class = "title_text">Title:<input type="text" name="title" id = "titleAlbum" required></span>
+	 	 		<input  class = "submitChange" id = "submitAlbum" type = "button" value = "Create Album">
+	 	 	</form>  		
+		 	 
+	
+	<!-- Table containing the pictures of the album that was selected -->	
+	<h3 id = "titlePictures" class = "title2"></h3>
+	<span class = "noPictures" id = "no_pictures"></span>
+	<span><input style = "margin-left: 80%;" class = "submitChange" id="closePictures" type="button" value = "Close Gallery"></span>
+	<div style = "float: center;">
+	
+	<table id = "id_picturesContainer" class = "tablePictures">
+			<tbody id="id_pictureTableBody">
+			</tbody>
+	</table>	
+	</div>
+
+	<div id = "modal" class = "modal">
+	<input style = "margin-left: 80%;" class = "submitChange" id="closeButton" type="button" value = "Close Details">
+	
+	<div class="pictureDetailsPage" id="pictureDetailsPage">		
+		
+			<div class="big_image" id="pictureDetailsTable"></div>
+			
+		<div style = "background-color : #e2eefe; margin-right: 15%; margin-left:15%; border-radius: 10px; margin-bottom : 3% ">	
+			<p class = "comment_title" id = "comments_title">Comments</p>
+			<div id = "commentsTable" class="comments_grid"></div>
+			
+			
+		<p id = "alertNoComments" class = "comment_title"></p>
+		<h3 class = "comment_title">You can leave a comment here if you want:</h3>
+		<form action = '#'>
+			<textarea name="comment" id = "comment" required></textarea>
+			<br>
+			<input id = "submitComment" class = "send" type = "button" value = "Submit">
+		</form>	
+	</div>
+	
+	</div>
+	</div>
+	
+	<h2 class= "title" id ="titleOtherUsers">Here you can see other users' albums:</h2>
+	 			
+			<div class="gridOthers" id = "gridOthers"></div>	
+
+</body>
+</html>
